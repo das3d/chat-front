@@ -22,7 +22,7 @@ const App = ({isAuth, authentificated, setUsers, state, setMessages}) => {
             {!isAuth//implementation of a quick transition to the registration window by the link
                 ? <Routes>
                     <Route path={'/rooms/:id'} element={<AuthContainer authentificated={authentificated}/>}/>
-                    ||<Route path={'/rooms/'} element={<AuthContainer authentificated={authentificated}/>}/>
+                    ||<Route path={'/'} element={<AuthContainer authentificated={authentificated}/>}/>
                 </Routes>
                 : <Chat {...state} addMessage={setMessages}/>}
         </div>
